@@ -1,0 +1,349 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+  font-family: arial;
+}
+.body  {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 8px; 
+  display: flexbox;
+}
+.pantalla1 , .pantallaKanto , .pantallaJohto , .pantallaFinal  , .pantallaCp , .pantallaTipos{
+  width: 100%;
+  height: 100%;
+  background:url(./img/piki.jpg);
+  border-radius: 8px; 
+  display: flexbox;
+}
+
+.portada{
+    width: 100%;
+    background:white;
+    display: flexbox;
+}
+
+.portada img {
+  display: flexbox;
+  width: 420px;
+  
+}
+.video {
+  display: flexbox;
+}
+
+#menu{
+  margin:auto;
+  width: 500px;
+  font-family: arial,helvetica,sans-serif;
+}
+ul, ol{
+  list-style:none;
+}
+.navegator li a{
+  background-color:rgb(4, 4, 116);
+  color:white;
+  text-decoration:none;
+  padding: 10px 15px;
+  display:block;
+}
+.navegator li a:hover{
+  background:#434343;
+}
+.navegator > li {
+  float:left;
+}
+.navegator li ul{
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+.navegator li:hover > ul {
+  display:block;
+}
+.navegator li ul li{
+  position:relative;
+}
+.navegator li ul li ul{
+  right:-140px;
+  top:0;
+}
+#volver{
+  width: 60px;
+  height: 60px;
+  background :rgb(48, 141, 179);
+  border-radius:30px;
+  block-size: 100% 100%;
+  border: white;
+  color:black;
+  font-size: 20px;
+  text-align: center;
+}
+#buscar{
+ padding:10px 15px;
+  margin-left: 150px; 
+ 
+}
+.lupa{
+  width: 10px;
+  height: 10px;
+}
+.title{
+  font-family:fantasy;
+  font-size: 50px;
+  text-align: center;
+  color: #FC6E34;
+}
+h1{
+  padding:40px;
+  color:green;
+  -webkit-text-stroke: 2px black;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 50px;
+  
+
+}
+h2{
+  color:rgb(4, 4, 99);
+  text-align: center;
+  font-size: 60px;
+
+}
+h3{
+  color:rgb(4, 4, 99);
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 20px;
+
+}
+.txt{
+  color:rgb(4, 4, 99);
+  text-align: center;
+  font-size: 20px;
+}
+img{
+  display: block ;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.info {
+  width: 480px; height: 85px;
+  background: rgb(66, 178, 223);
+  background: linear-gradient(top, #BFF 5%, #DFF 100%);
+  background: -webkit-linear-gradient(top, #FFF 1%, #BFF 100%);
+  background: -moz-linear-gradient(top, #BFF 5%, #DFF 100%);
+  background: -ms-linear-gradient(top, #BFF 5%, #DFF 100%);
+  background: -o-linear-gradient(top, #BFF 5%, #DFF 100%);
+  border-radius: 100px;
+  display: block ;
+  margin-left: auto; 
+  margin-right: auto;
+  text-align: center;
+  font-size: 20px;
+  
+}
+
+iframe{
+  padding: 120px;
+  display: block ;
+  margin-left: auto; 
+  margin-right: auto;
+}
+button{
+  width: 140px;
+  height: 60px;
+  background:hsl(0, 0%, 1%);
+  block-size: 100% 100%;
+  border: white;
+  color:black;
+  font-size: 20px;
+  text-align: center;
+  justify-content: space-between;
+ 
+}
+button:hover{
+  background-color: #434343;
+}
+button:focus{
+  outline:none;
+}
+
+.container{
+  padding:10px 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.filterType{
+  text-align: center;
+  width: 130px;
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-bottom: 15px;
+  margin-right: auto;
+  color:WHITE;
+  
+  background: rgb(4, 4, 99);
+  max-width: 100%;
+  
+}
+.box_type{
+  width: 25%;
+  text-align: center;
+}
+.box_type img{
+  border-radius: 50%;
+  max-width: 100%;
+}
+.normal{
+  border-radius: 50% 50%;
+}
+.lucha{
+  border-radius: 50% 50%;
+}
+.fuego{
+  border-radius: 50% 50%;
+}
+.planta{
+  border-radius: 50% 50%;
+}
+.agua{
+  border-radius: 50% 50%;
+}
+.hielo{
+  border-radius: 50% 50%;
+}
+.roca{
+  border-radius: 50% 50%;
+}
+.veneno{
+  border-radius: 50% 50%;
+}
+.suelo{
+  border-radius: 50% 50%;
+}
+.electrico{
+  border-radius: 50% 50%;
+}
+.psiquico{
+  border-radius: 50% 50%;
+}
+.bicho{
+  border-radius: 50% 50%;
+}
+.volador{
+  border-radius: 50% 50%;
+}
+.siniestro{
+  border-radius: 50% 50%;
+}
+.acero{
+  border-radius: 50% 50%;
+}
+.hada{
+  border-radius: 50% 50%;
+}
+.fantasma{
+  border-radius: 50% 50%;
+}
+.dragon{
+  border-radius: 50% 50%;
+}/* tarjetas a los pokémones*/ 
+.pantallaFinal .box_type {
+  background-color: rgb(199, 191, 191);
+  border-radius: 25px;
+  border: solid 2px rgb(12, 12, 12);
+  width: 200px;
+  height: 250px;
+  color: rgb(3, 3, 3);
+  text-align: center;
+  margin: 30px 20px 20px 20px;
+  transition: all 500ms ease-out;
+  text-transform: capitalize;
+  box-shadow: 0px 15px 25px rgba(20, 9, 9, 0.829);
+}
+/* efecto hover a las tarjetas*/
+.pantallaFinal .box_type:hover {
+  transform: rotateY(180deg);
+}
+.pantallaFinal .back{
+  background-color: skyblue;
+  border-radius: 25px;
+  border: solid 2px rgb(12, 12, 12);
+  width: 200px;
+  height: 250px;
+  color: rgb(3, 3, 3);
+  text-align: center;
+  transform: rotateY(180deg);
+  position: absolute;;
+   top:0;  
+}
+/*card pokemon cp*/
+.pantallaCp .cardPokemon{
+  background-color: rgb(199, 191, 191);
+  border-radius: 25px;
+  border: solid 2px rgb(12, 12, 12);
+  width: 200px;
+  height: 250px;
+  color: rgb(3, 3, 3);
+  text-align: center;
+  margin: 30px 20px 20px 20px;
+  transition: all 500ms ease-out;
+  text-transform: capitalize;
+  box-shadow: 0px 15px 25px rgba(20, 9, 9, 0.829);
+}
+.containerCp{
+  padding:10px 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#header{
+  margin:auto;
+  width: 250px;
+  font-family: arial,helvetica;
+}
+ul, ol{
+  list-style:none;
+
+}
+.nav li a{
+  background-color:rgb(4, 4, 99);
+  color:white;
+  text-decoration:none;
+  padding: 10px 15px;
+  display:block;
+}
+.nav li a:hover{
+  background:#434343;
+}
+.nav > li {
+  float: left;
+}
+.nav li ul{
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+.nav li:hover > ul {
+  display:block;
+}
+.nav li ul li{
+  position:relative;
+}
+.nav li ul li ul{
+  right:-140px;
+  top:0;
+}
+
+
