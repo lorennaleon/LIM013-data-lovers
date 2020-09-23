@@ -4,77 +4,36 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header id="portada" class="portada">
-    <img src="./img/im.jpeg"/>
+    <img src="./img/logo.jpg"/>
   </header>
-  <section id="pantalla1" class="pantalla1">
-    <div id="menu">
-      <ul class="navegator">
-       <li><a href ="#">INICIO</a></li>
-       <li id="regiones"><a href ="#">REGIONES</a>
-         <ul>
-          <li id="kanto"> <a  href ="#">kanto</a></li>
-          <li id="johto"> <a href ="#">johto</a></li>
+  <div id="menu">
+    <ul class="navegator">
+     
+     <li id="regiones"><a href ="#">REGIONES</a>
+       <ul>
+        <li id="kanto"> <a href ="#">KANTO</a></li>
+        <li id="johto"> <a href ="#">JOHTO</a></li>
+       </ul>
+      </li>
+
+      <li id="tipos"> <a href ="#">TIPOS</a></li>
+      <li> <a href ="#">ORDENAR</a>
+        <ul class="submenu">
+           <li id="az"><a href="#">DE A - Z</a></li>
+           <li id="za"><a href="#">DE Z - A</a></li>
+
          </ul>
-        </li>
+       </li>
+    </ul>
+  </div>
+      <input id="buscar" class="Buscar" placeholder="BUSCAR"></input>
 
-       <li id="tipos"> <a href ="#">TIPOS</a>
-        </li>
-       <li id="cp"> <a href ="#">CP</a></li>
-       <li id="debilidades"> <a href ="#">DEBILIDADES</a></li>
-      </ul>
-    </div>
-        <input id="buscar" class="Buscar" placeholder="BUSCAR"></input>
-    <h1 id="title"> 💙 BIENVENIDOS A POKEMON LOVERS 💙</h1>
-    <p id="info" class="info">Pokémon Go es un juego interactivo en el cual el
-      usuarios tendrá que atrapar a 890 pokemon para
-      cumplir el reto de ser el un maestro pokemon.
-    </p>
-    <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VNKAJ04_sx0" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
-    </div>
+  <section id="pantalla1" class="pantalla1">
   </section>
-  <section id="pantallaKanto" class="pantallaKanto" style='display:none'>
-
-    <h1>REGION KANTO</h1>
-    <p id="txt" class="txt">Es la región del mundo Pokémon situada al este de Johto y al sur de Sinnoh. 
-      Su paisaje está inspirado en la zona de Japón del mismo nombre, la región de Kantō.
-
-      Kanto pertenece al mismo continente que Johto. El lazo que une ambas regiones viene dado por las Cataratas Tohjo, si bien también está la ruta 27, que sirve de cruce con la Cueva Plateada, integrada en Johto pero separada de los demás lugares. Una de las formas más rápidas de viajar de una región a otra es tomando el Magnetotrén, un tren de alta velocidad que realiza el trayecto Ciudad Azafrán-Ciudad Trigal, además del barco que hace el trayecto Ciudad Olivo-Ciudad Carmín, aunque solo salga de Ciudad Olivo los lunes y viernes; y de Ciudad Carmín los miércoles y domingos.
-      
-      La gran mayoría de las ciudades tiene nombres de colores: Ciudad Verde, Ciudad Carmín, Ciudad Celeste, etc., siendo la más importante por excelencia Ciudad Azafrán, pues en ella se encuentra la sede del centro empresarial más importante de la región, Silph S.A..
-    </p>
-     <div class="vid">
-      <div class="vid">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/riP6ExdcpV8" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       </div>
-     </div>
-    <input type="button" id=volver value="volver" onclick="javascript:window.location.reload();" />
-  </section>
-  <section id="pantallaJohto" class="pantallaJohto" style='display:none'>
-
-    <h1>REGION JOHTO</h1>
-    <p id="txt" class="txt">Es la región del mundo Pokémon situada al oeste de Kanto. Su paisaje está inspirado en la zona de Japón llamada región de Kinki y el oeste de la región de Tōkai.
-
-      Johto y Kanto forman una sola gran masa de tierra, un continente, en cuyo centro y dividiendo ambas regiones se encuentra la Meseta Añil, la Liga Pokémon, junto con el Monte Plateado y las Cataratas Tohjo. Comparte la misma Liga Pokémon con Kanto, solo que con otros miembros del Alto Mando y un nuevo campeón.
-      
-      El lazo que une ambas regiones viene dado por las Cataratas Tohjo, si bien también está la ruta 27, que sirve de cruce con la Cueva Plateada, integrada en Johto pero separada de los demás lugares. En lo que a medios de transporte respecta, Johto y Kanto están unidos por el Magnetotren mediante tierra y por el S.S. Aqua por vía marina.
-      Este contenido proviene de wikidex.net, y debe darse atribución a sus autores, tal como especifica la licencia.
-      Se prohíbe su uso a PlagioDex (el wiki de FANDOOM), por copiar reiteradamente sin dar atribución
-    </p>
-    <div class="vid">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/hP2GoOKASAY" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
-     </div>
-    <input type="button" id=volver value="volver" onclick="javascript:window.location.reload();" />
-  </section>
-  
   <section id="pantallaTipos" class="pantallaTipos" style='display:none'>
     <h1>😆 TIPOS DE POKEMON 😆</h1>
     <div id="container" class="container">
@@ -150,40 +109,20 @@
         <img src="img/dragon.PNG" alt="Tipo dragon">
         <button type="button" class="filterType" id="dragon">DRAGON</button>
       </div>
-    </div>
+  </div>
   </section>
   <section id="pantallaFinal" class="pantallaFinal" style='display:none'>
-    <h1>DETALLES: </h1>
+    <h1> 💙 DETALLES 💙 </h1>
     <input type="button" id=volver value="volver" onclick="javascript:window.location.reload();" />
     <div id="pantallaFinal_container" class="container">
     </div>
   </section>
-  <section id="pantallaCp" class="pantallaCp" style='display:none'>
-    <h1> 😄 POKEMONES 😄 </h1>
-    <div id="containerCp" class="containerCp">
-    </div>
-     <div id="header">
-        <ul class="nav">
-         <li> <a href ="#">filtrado</a>
-           <ul class="submenu">
-              <li id="az"><a href="#">DE A - Z</a></li>
-              <li id="za"><a href="#">DE Z - A</a></li>
-              <li id="mame"><a href="#">DE MAYOR A MENOR CP</a></li>
-              <li id="mema"><a href="#">DE MENOR A MAYOR CP</a></li>
 
-            </ul>
-          </li>
-        </ul>
-      
-      </div>
-    
-  </section>
-
+  
+  
   <footer>
   </footer>
   <script src="./main.js" type="module"></script>
  
 </body>
 </html>
-
-
