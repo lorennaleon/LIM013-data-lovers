@@ -1,55 +1,91 @@
 
-import { ordenar , filtrarGeneracion} from'./data.js';
+import {ordenar} from'./data.js';
 import data from './data/pokemon/pokemon.js';
  //jalando data
  function pokemonDetalle(pokemonsResultado) {
-    const imagenes = pokemonsResultado.map((pokemon,i)=>{
+      const imagenes = pokemonsResultado.map((pokemon,i)=>{
         let img = pokemon.img;
         return img;
-    })
-    const names = pokemonsResultado.map((pokemon, i) => {
+      })
+      const names = pokemonsResultado.map((pokemon, i) => {
         let informacion = pokemon.name ;
        return informacion  ;
-    });
-    const generation = pokemonsResultado.map((pokemon, i) => {
+      });
+      const generation = pokemonsResultado.map((pokemon, i) => {
         let informacion = pokemon.generation.name ;
        return informacion  ;
-    });   
-    const stats = pokemonsResultado.map((pokemon, i) => {
+      });   
+     const stats = pokemonsResultado.map((pokemon, i) => {
         let informacion = pokemon.stats['max-cp'];
        return informacion  ;
-    });
+     });
+     const eggs = pokemonsResultado.map((pokemon, i) => {
+        let informacion = pokemon.egg;
+       return informacion  ;
+     });
 
    
      for (let j=0 ; j<pokemonsResultado.length ; j++){    
-        let pokemon =document.createElement("div");
-        pokemon.innerHTML = `
+         let pokemon =document.createElement("div");
+         pokemon.innerHTML = `
         
          <div class='front'>
             <img src='${imagenes[j]}'/>
-            <h3>"${names[j]}"</h3>  
+            <h3>${names[j]}</h3> 
+            <h3>REGIÓN: ${generation[j]}</h3> 
          </div>
-         <div class='back'>
-           <h3>REGIÓN: ${generation[j]}</h3> 
+         <div class='back'> 
            <h3>MAX-CP: ${stats[j]}</h3>  
+           <h3>HUEVOS: ${eggs[j]}</h3>  
          </div>
          `
 
-document.getElementById('pantalla1').appendChild(pokemon);  
-    } 
- }
-pokemonDetalle(data.pokemon);
-console.table(data.pokemon);
+         document.getElementById('pantalla1').appendChild(pokemon);  
+        } 
+    }
+       
+ //console.log(formulario.value);
+    
+ pokemonDetalle(data.pokemon);
+ console.table(data.pokemon);
 
-//click al boton tipos
-document.getElementById('tipos').addEventListener('click',function(){
+ //busqueda
+
+ const formulario = document.querySelector('#formulario');
+ const boton = document.querySelector('#boton');
+ const filtrar = (pokemon)=>{
+     resultado.innerHTML='';
+     const texto = formulario.value.toLowerCase();
+      
+     const busqueda = pokemon.filter(function(item){
+         if (item.name.includes(texto)){
+             return true;
+         }else 
+         return false;
+        });
+     console.log(texto);
+     console.log(busqueda);
+     document.getElementById('pantalla1').innerHTML="";
+     pokemonDetalle(busqueda);
+      if(busqueda.length ===0 ){
+          resultado.innerHTML +=`
+         <p>Pokemon no  encontrado...</p>
+          `
+        }
+    }
+        boton.addEventListener('click',()=>{
+            filtrar(data.pokemon);
+        });   
+ //click al boton tipos
+ document.getElementById('tipos').addEventListener('click',function(){
     //ocutar pantalla 1
     document.getElementById('pantalla1').style.display='none';
     //mostrar pantalla 2
     document.getElementById('pantallaTipos').style.display = 'block';
-});
-//click botones de tipo de pokemon agua
-document.getElementById('water').addEventListener('click',function(){  
+ });
+
+ //click botones de tipo de pokemon agua
+ document.getElementById('water').addEventListener('click',function(){  
     document.getElementById('pantallaTipos').style.display='none';
     document.getElementById('pantallaFinal').style.display = 'block';    
     })
@@ -155,7 +191,7 @@ function filterType(event){
                 let pokemon_name = character.name ;
                 let pokemon_generation= character.generation.name;
                 let pokemon_egg= character.egg;
-                let pokemon_type= character.type;
+                let pokemon_stats= character.stats['max-cp'];
                 let pokemon_print =document.createElement("div");
                 pokemon_print.setAttribute('class', 'box_type');
                 pokemon_print.innerHTML = `
@@ -165,7 +201,7 @@ function filterType(event){
                 </div>
                 <div class='back'>
                     <h3>"REGIÓN:${pokemon_generation}"</h3>
-                    <h3>"TIPO:${pokemon_type}"</h3>
+                    <h3>"MAX-CP:${pokemon_stats}"</h3>
                     <h3>"HUEVOS:${pokemon_egg}"</h3>
                 </div>;
                 `
@@ -201,12 +237,6 @@ document.getElementById('pantalla1').innerHTML="";
 //ordenado
 pokemonDetalle(ordenZa);
 });
-//click a kanto
-document.getElementById('kanto').addEventListener('click',function(){
-//filtrar data
-let filtrado = filtrarGeneracion.kanto(data.pokemon);
-//mostrar en pantalla
-document.getElementById('pantalla1').innerHTML="";
-//filtrado
-pokemonDetalle(filtrado);
-});
+
+
+    

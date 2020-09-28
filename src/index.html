@@ -8,9 +8,8 @@
 </head>
 <body>
   <header id="portada" class="portada">
-    <img src="./img/logo.jpg"/>
-  </header>
-  <div id="menu">
+    <img src="./img/poo.jpg"/>
+   <div id="menu">
     <ul class="navegator">
      
      <li id="regiones"><a href ="#">REGIONES</a>
@@ -29,9 +28,14 @@
          </ul>
        </li>
     </ul>
-  </div>
-      <input id="buscar" class="Buscar" placeholder="BUSCAR"></input>
-
+   </div>
+      <div class="container">
+        <input type="text" id="formulario" class="form-control" placeholder="buscar">
+        <button class=" btn btn-info " id="boton">Buscar</button>
+        <ul id="resultado">
+        </ul>
+      </div>
+  </header>
   <section id="pantalla1" class="pantalla1">
   </section>
   <section id="pantallaTipos" class="pantallaTipos" style='display:none'>
@@ -112,7 +116,6 @@
   </div>
   </section>
   <section id="pantallaFinal" class="pantallaFinal" style='display:none'>
-    <h1> 💙 DETALLES 💙 </h1>
     <input type="button" id=volver value="volver" onclick="javascript:window.location.reload();" />
     <div id="pantallaFinal_container" class="container">
     </div>

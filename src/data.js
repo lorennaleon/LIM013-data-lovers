@@ -23,12 +23,3 @@ export const ordenar ={
   },
 };
 
-export const filtrarGeneracion={
-  kanto:function(pokemon , generation){
-   const pkanto= pokemones.filter((pokemon) => {
-     if(generation === "kanto"){
-      return pkanto;
-      } 
-    });
-  },
-};
