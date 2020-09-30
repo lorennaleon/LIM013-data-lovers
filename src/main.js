@@ -1,5 +1,5 @@
 
-import {ordenar} from'./data.js';
+import {ordenar } from'./data.js';
 import data from './data/pokemon/pokemon.js';
  //jalando data
  function pokemonDetalle(pokemonsResultado) {
@@ -42,15 +42,10 @@ import data from './data/pokemon/pokemon.js';
 
          document.getElementById('pantalla1').appendChild(pokemon);  
         } 
-    }
-       
- //console.log(formulario.value);
-    
+    }         
  pokemonDetalle(data.pokemon);
  console.table(data.pokemon);
-
  //busqueda
-
  const formulario = document.querySelector('#formulario');
  const boton = document.querySelector('#boton');
  const filtrar = (pokemon)=>{
@@ -76,6 +71,41 @@ import data from './data/pokemon/pokemon.js';
         boton.addEventListener('click',()=>{
             filtrar(data.pokemon);
         });   
+ // filtrar generacion johto
+  const filtrado = (pokemon)=>{
+     resultado.innerHTML='';   
+     const filter = pokemon.filter((item)=>{
+         if(item.generation.name  === 'johto' ){
+             return true
+         }else
+         return false; 
+      });
+      console.log(filter);  
+     document.getElementById('pantalla1').innerHTML="";
+     pokemonDetalle(filter);
+    }
+        johto.addEventListener('click',()=>{
+            filtrado(data.pokemon);
+        }); 
+
+ //FILTRAR GENERACION KANTO
+   const filtrando =(pokemon)=>{
+       resultado.innerHTML='';
+       const filterK = pokemon.filter((item)=>{
+        if(item.generation.name  === 'kanto' ){
+            return true
+        }else
+        return false; 
+       })
+       console.log(filterK);  
+     document.getElementById('pantalla1').innerHTML="";
+     pokemonDetalle(filterK);
+    }
+        kanto.addEventListener('click',()=>{
+             filtrando(data.pokemon);
+        }); 
+
+        
  //click al boton tipos
  document.getElementById('tipos').addEventListener('click',function(){
     //ocutar pantalla 1
@@ -83,7 +113,6 @@ import data from './data/pokemon/pokemon.js';
     //mostrar pantalla 2
     document.getElementById('pantallaTipos').style.display = 'block';
  });
-
  //click botones de tipo de pokemon agua
  document.getElementById('water').addEventListener('click',function(){  
     document.getElementById('pantallaTipos').style.display='none';
@@ -237,6 +266,15 @@ document.getElementById('pantalla1').innerHTML="";
 //ordenado
 pokemonDetalle(ordenZa);
 });
-
+//filtra johto
+document.getElementById('johto').addEventListener('click',function(){
+//filtrar data
+let filtraJohto = filtrado.johto(data.pokemon);
+//LIMPIA
+document.getElementById('pantalla1').innerHTML="";
+//ordenado
+pokemonDetalle(filtraJohto);
+});
+    
 
     
