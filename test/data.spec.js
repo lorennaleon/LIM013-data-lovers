@@ -1,17 +1,19 @@
-import { sort, anotherExample } from '../src/data.js';
+import { ordenar } from '../src/data.js';
 
 
 describe('ordenar', () => {
-  it('ordenar las letras', () => {
-    expect(sort(a,c,b)).toBe(a,b,c);
+  it('ordenar de A a Z', () => {
+    const data=[{name:"pikachu"},{name:"bulbasur"},{name:"charmander"}];
+    const resultado=[{name:"bulbasur"},{name:"charmander"},{name:"pikachu"}];
+    expect(ordenar.az(data)).toBe(resultado);
+  });
+  it('ordenar de Z a A', () => {
+    const data=[{name:"pikachu"},{name:"bulbasur"},{name:"charmander"}];
+    const resultado=[{name:"pikachu"},{name:"charmander"},{name:"bulbasur"}];
+    expect(ordenar.za(data)).toBe(resultado);
   });
 
-  it('ordenar los numeros', () => {
-    expect(sort(1,3,2)).toBe(1,2,3);
-  });
 });
-
-
 describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
