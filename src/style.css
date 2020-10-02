@@ -15,13 +15,13 @@ html{
   display: flex;  
   font-family: 'Roboto', sans-serif;
 }
-.pantalla1 , .pantallaTipos , .pantallaFinal{
+.pantalla1 {
   width: 100%;
   height: 100%;
   background:url(./img/fondo.jpg);
- 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .portada{
@@ -42,6 +42,7 @@ html{
   margin:auto;
   width: 500px;
   font-family: arial,helvetica,sans-serif;
+  display: flexbox;
 }
 ul, ol{
   list-style:none;
@@ -82,23 +83,6 @@ ul, ol{
   right:-140px;
   top:0;
 }
-button{
-  width: 140px;
-  height: 60px;
-  background:hsl(0, 0%, 1%);
-  block-size: 100% 100%;
-  border: white;
-  color:black;
-  font-size: 20px;
-  text-align: center;
-  justify-content: space-between;
- 
-}
-button:hover{
-  background-color: #434343;
-}
-
-
 .container{
   padding:10px 15px;
   display: flex;
@@ -106,83 +90,6 @@ button:hover{
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.filterType{
-  text-align: center;
-  width: 130px;
-  display: block;
-  margin-top: 15px;
-  margin-left: auto;
-  margin-bottom: 15px;
-  margin-right: auto;
-  color:WHITE; 
-  background: rgb(4, 4, 99);
-  max-width: 100%;
-  border-radius: 10px;
-  
-}
-.box_type{
-  width: 25%;
-  text-align: center;
-}
-.box_type img{
-  border-radius: 50%;
-  max-width: 100%;
-}
-.normal{
-  border-radius: 50% 50%;
-}
-.lucha{
-  border-radius: 50% 50%;
-}
-.fuego{
-  border-radius: 50% 50%;
-}
-.planta{
-  border-radius: 50% 50%;
-}
-.agua{
-  border-radius: 50% 50%;
-}
-.hielo{
-  border-radius: 50% 50%;
-}
-.roca{
-  border-radius: 50% 50%;
-}
-.veneno{
-  border-radius: 50% 50%;
-}
-.suelo{
-  border-radius: 50% 50%;
-}
-.electrico{
-  border-radius: 50% 50%;
-}
-.psiquico{
-  border-radius: 50% 50%;
-}
-.bicho{
-  border-radius: 50% 50%;
-}
-.volador{
-  border-radius: 50% 50%;
-}
-.siniestro{
-  border-radius: 50% 50%;
-}
-.acero{
-  border-radius: 50% 50%;
-}
-.hada{
-  border-radius: 50% 50%;
-}
-.fantasma{
-  border-radius: 50% 50%;
-}
-.dragon{
-  border-radius: 50% 50%;
-}
-
 
 #formulario{
 height: 25px;
@@ -230,7 +137,6 @@ background:rgb(252, 188, 230);
   text-align: center;
   margin: 30px 20px 20px 20px;
   transition: all 500ms ease-out;
-  
   z-index: 1;
   position: relative; 
   

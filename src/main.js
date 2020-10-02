@@ -31,7 +31,6 @@ function pokemonDetalle(pokemonsResultado) {
   for (let j = 0; j < pokemonsResultado.length; j++) {
     let pokemon = document.createElement("div");
     pokemon.innerHTML = `
-        
          <div class='front'>
             <img src='${imagenes[j]}'/>
             <h3>${names[j]}</h3> 
@@ -43,8 +42,7 @@ function pokemonDetalle(pokemonsResultado) {
            <h3>TIPOS: ${types[j]}</h3>
          </div>
          `
-
-    document.getElementById('pantalla1').appendChild(pokemon);
+       document.getElementById('pantalla1').appendChild(pokemon);
   }
 }
 pokemonDetalle(data.pokemon);
@@ -62,8 +60,6 @@ const busqueda = pokemon.filter(function (item) {
     } else
       return false;
   });
-  console.log(texto);
-  console.log(busqueda);
   document.getElementById('pantalla1').innerHTML = "";
   pokemonDetalle(busqueda);
   if (busqueda.length === 0) {
@@ -101,18 +97,15 @@ const filtrando = (pokemon) => {
     } else
       return false;
   })
-  console.log(filterK);
   document.getElementById('pantalla1').innerHTML = "";
   pokemonDetalle(filterK);
 }
 kanto.addEventListener('click', () => {
   filtrando(data.pokemon);
 });
-   //filtrar tipo
+   //filtrar tipos
 const filtertype = document.querySelector('#tipos');
 filtertype.addEventListener('click', function (e) {
-  // console.log(filtertype);
-  console.log(e.target.id);
   const tipos = e.target.id;
   const filterT = data.pokemon.filter((item) => {
     if (item.type.includes(tipos)) {
@@ -127,7 +120,7 @@ filtertype.addEventListener('click', function (e) {
 document.getElementById('az').addEventListener('click', function () {
   //ordenar data
   let ordenAz = ordenar.az(data.pokemon);
-  //mostrar en pantalla
+  //limpiar pantalla
   document.getElementById('pantalla1').innerHTML = "";
   //ordenado
   pokemonDetalle(ordenAz);
@@ -137,7 +130,7 @@ document.getElementById('az').addEventListener('click', function () {
 document.getElementById('za').addEventListener('click', function () {
   //ordenar data
   let ordenZa = ordenar.za(data.pokemon);
-  //mostrar en pantalla
+  //limpiar pabtalla
   document.getElementById('pantalla1').innerHTML = "";
   //ordenado
   pokemonDetalle(ordenZa);
