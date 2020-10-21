@@ -1,4 +1,4 @@
-import { ordenar } from '../src/data.js';
+import { ordenar, functionFilter } from '../src/data.js';
 
 
  describe('ordenar', () => {
@@ -13,5 +13,14 @@ import { ordenar } from '../src/data.js';
       const resultado=[{name:"pikachu"},{name:"charmander"},{name:"bulbasur"}];
      expect(ordenar.za(data)).toEqual(resultado);
     });
+  });
+  describe('functionFilter', () => {
+    it('filtrar tipos', () => {
+      const data=[{type:"fire" ,name:"charmander" },{type:"water",name:"blastoise"},{type:"normal",name:"rattata"}];
+      const resultado=[{ "name": "charmander","type": "fire"}];
+      expect(functionFilter.tipos(data,"fire")).toEqual (resultado);
+    });
+
+    
   });
 
